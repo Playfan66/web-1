@@ -1,0 +1,49 @@
+/* 
+ *	 # 	Organización básica css
+ *	## 	Creado por @juandiegoles 2015 con fines pedagógicos*
+ *	##	Recomiendo encarecidamente el uso de sass http://sass-lang.com/
+ *		- Se ordenará por orden alfabético.
+ *			- Usamos el orden alfabético para que el código 
+ *			sea más fácil de leer por otros desarrolladores.
+ *		- El tab size será 4.
+ *		- Recuerda comentar todo para no olvidarlo.	
+ *
+ * 	## 	Base typography
+ *		- En este css vamos a poner todas las tags básicas. 
+ *		No ponemos ni class ni id
+ *
+ */
+
+/* Estilos generales tipografía */
+body {
+	color: #010101;
+	font-family: 'Helvetica','Arial', sans-serif;
+	font-size: 14px;
+}
+
+/* Links 
+ * Referencias: http://www.w3schools.com/html/html_links.asp
+ */
+a { 
+	color: #039039; 
+	text-decoration: underline;
+}
+a:hover { 
+	color: #03C03C; 
+	text-decoration: none;
+}
+
+/* Headings 
+ * Referencias: http://www.w3schools.com/html/html_headings.asp
+ */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+ 	font-family: 'Georgia', 'Times', serif;
+ 	font-style: italic;
+ 	font-weight: normal;
+ }
+

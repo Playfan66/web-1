@@ -1,0 +1,29 @@
+/* 
+ *	 # 	Organización básica css
+ *	## 	Creado por @juandiegoles 2015 con fines pedagógicos*
+ *	## 	Recomiendo encarecidamente el uso de sass http://sass-lang.com/
+ *		- Se ordenará por orden alfabético.
+ *			- Usamos el orden alfabético para que el código 
+ *			sea más fácil de leer por otros desarrolladores.
+ *		- El tab size será 4.
+ *		- Recuerda comentar todo para no olvidarlo.	
+ *
+ * 	## 	Layout
+ *		- En este css vamos a poner la estructura básica de 
+ *      nuestra página. Esctructuramos de arriba a abajo
+ *
+ */
+
+/* Base Header */
+.header {
+	background-color: #555555;
+	color: #ffffff;
+}
+.header__logo {
+
+}
+
+/* Top Menu */
+.header__menu {
+
+}
