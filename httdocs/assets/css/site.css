@@ -6,7 +6,8 @@
  *			· Usamos el orden alfabético para que el código 
  *			sea más fácil de leer por otros desarrolladores.
  *		- El tab size será 4.
- *		- Recuerda comentar todo para no olvidarlo.	
+ *		- Recuerda comentar todo para no olvidarlo. Y otros puedan 
+ *		entender tu código
  *
  * 	## 	1. Base
  *		- En este css vamos a poner todas las tags básicas. 
@@ -30,7 +31,7 @@
  *
  *		3.1 Grid
  *		3.2 Icons
- *		3.3 Misc
+ *		3.3 Mediaqueries
  */
 
 
@@ -163,9 +164,73 @@ a:hover {
 	margin: 0 auto;
 	width: 80%;
 }
-
 /*
- * ### 	3.2 Misc 
+ *	### Sistema de grids
+ *		Basado en http://www.responsivegridsystem.com/calculator/
+ */
+
+.row {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+.row:before,
+.row:after {
+	display:table; 
+	content:"";  
+}
+.row:after { 
+	clear:both;
+}
+.row {
+	zoom:1; /* For IE 6/7 */ 
+}
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { 
+	margin-left: 0; 
+}
+.col_12 {
+	width: 100%;
+}
+.col_11 {
+  	width: 91.53%;
+}
+.col_10 {
+  	width: 83.06%;
+}
+.col_9 {
+  	width: 74.6%;
+}
+.col_8 {
+  	width: 66.13%;
+}
+.col_7 {
+  	width: 57.66%;
+}
+.col_6 {
+  	width: 49.2%;
+}
+.col_5 {
+  	width: 40.73%;
+}
+.col_4 {
+  	width: 32.26%;
+}
+.col_3 {
+  	width: 23.8%;
+}
+.col_2 {
+  	width: 15.33%;
+}
+.col_1 {
+  	width: 6.866%;
+}
+/*
+ * ### 	3.2 Icons 
  */
 .icons {
 	/* Esta es la manera accesible de poner un icono de fondo */
@@ -173,6 +238,23 @@ a:hover {
 	text-indent: -999em;
 }
 
-
-
-
+/*
+ * ### 	3.3 Mediaqueries 
+ */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+    .col_12, 
+    .col_11, 
+    .col_10, 
+    .col_9, 
+    .col_8, 
+    .col_7, 
+    .col_6, 
+    .col_5, 
+    .col_4, 
+    .col_3, 
+    .col_2, 
+    .col_1 {
+	width: 100%; 
+	}
+}
