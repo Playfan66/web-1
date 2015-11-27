@@ -119,7 +119,7 @@ ul {
  * Referencias: http://www.w3schools.com/html/html_lists.asp
  */
 table {
-	border: 0.2em solid #999999; 
+	border: 0.2em solid #222222; 
 }
 thead {
 
@@ -135,9 +135,8 @@ td {
  * Referencias: http://www.w3schools.com/html/html_lists.asp
  */
 body {
-	background-color: #EEEEEE;
-	color: #666666;
-	font-family: 'Georgia', 'Times', serif;
+	color: #222222;
+	font-family: 'Helvetica','Arial', sans-serif;
 	/* El tamaño general de la tipografía se pone en pixeles para establecer referencia con los em */
 	font-size: 16px;
 	line-height: 170%;
@@ -146,18 +145,15 @@ body {
  * Referencias: http://www.w3schools.com/html/html_links.asp
  */
 a { 
-	color: #0066FF; 
+	color: #222222; 
 	text-decoration: underline;
 }
 a:hover { 
-	color: #0099FF; 
 	text-decoration: none;
 }
 
 blockquote {
 	border-left: 0.2em solid;
-	color: #999999;
-	font-family: 'Georgia', 'Times', serif;
 	font-size: 1.2em;
 	font-style: italic;
 	padding-left: 1em;
@@ -173,7 +169,6 @@ blockquote {
  h5,
  h6 {
  	color: #222222;
- 	font-family: 'Helvetica','Arial', sans-serif;
  }
  h1 {
  	font-size: 2.5em;
@@ -193,8 +188,9 @@ blockquote {
  * ### 	2.1 Header 
  */
 .l_header {
-	background-color: #111111;
-	color: #ffffff;
+	background-color: #ffffff;
+	border-bottom: 0.2em solid #222222;
+	font-weight: bold;
 	height: 5em;
 	/*  Con este line-height centramos verticalmente los items del menu */
 	line-height: 5em;
@@ -202,21 +198,13 @@ blockquote {
 	width: 100%;
 	}
 	.l_header a {
-		color: #ffffff;
-		font-family: 'Helvetica','Arial', sans-serif;
-		font-weight: bold;
 		text-decoration: none;
-		/*  Esto hace que el hover tenga un retraso de 1 segundo */
-		-webkit-transition: all 1s;
-		-moz-transition: all 1s;
-		-o-transition: all 1s;
-		transition:all 1s;
 		}
-		.l_header a:hover { 
-			color: #0099FF; 
+		.l_header a:hover {
+			text-decoration: underline;
 		}
 .header__logo {
-	font-size: 3em;
+	font-size: 2em;
 
 }
 
@@ -236,7 +224,14 @@ blockquote {
 		padding-top: 5em;
 	}
 	.main {
-		background-color: #ffffff;
+		border: 0.2em solid #222222;
+		-webkit-border-radius: 0.5em;
+		-moz-border-radius: 0.5em;
+		border-radius: 0.5em;
+		/* No aumentar padding a la suma total del ancho */
+		-webkit-box-sizing:border-box; 
+		-moz-box-sizing:border-box; 
+	    box-sizing:border-box;
 	}
 
 .card__name {
@@ -247,23 +242,18 @@ blockquote {
  * ### 	2.3 Footer
  */
 .l_footer {
-	background-color: #232323;
-	color: #cccccc;
-	font-family: 'Helvetica','Arial', sans-serif;
 	padding: 1% 0 4% 0;
 	}
 	.l_footer h3 {
-		color: #cccccc;
-		border-bottom: 0.1em solid #cccccc;
+		border-bottom: 0.1em solid #222222;
 		padding-bottom: 2.5%;
 	}
 	.footer_legal {
-		font-family: 'Georgia', 'Times', serif;
 		font-size: 0.9em;
 	}
 	.l_footer textarea,
 	.l_footer input {
-		background-color: #111111;
+		border: 0.2em solid #222222;
 	}
 
 /*
@@ -277,6 +267,7 @@ blockquote {
 	(solo funciona si tiene width definido) */
 	margin: 0 auto;
 	width: 90%;
+
 }
 /*
  *	### Sistema de grids
@@ -403,8 +394,9 @@ blockquote {
 	width: 40%;
 }
 .bttn--success {
-	border: 0.1em solid #0099FF;
-	color: #0099FF;
+	background-color: #222222;
+	border: 0.2em solid #222222;
+	color: #ffffff;
 	line-height: 0;
 	font-size: 1em;
 	padding: 1em;
@@ -412,10 +404,11 @@ blockquote {
 	-moz-transition: all 1s;
 	-o-transition: all 1s;
 	transition:all 1s;
-}
-.bttn--success:hover {
-	color: #FFFFFF;
-}
+	}
+	.bttn--success:hover {
+		background-color: transparent;
+		color: #222222;
+		}
 
 /* Crédito de los íconos: https://www.iconfinder.com/iconsets/bettericons */
 
