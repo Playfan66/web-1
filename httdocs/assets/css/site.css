@@ -13,9 +13,10 @@
  *		- En este css vamos a poner todas las tags básicas. 
  *		No ponemos ni class ni id
  *
- *		1.1 Listas
- *		1.2 Tablas
- *		1.3 Tipografías
+ *		1.1 Form Base
+ *		1.2 Listas Base
+ *		1.3 Tablas Base
+ *		1.4 Tipografías Base
  *
  *	##	2. Layout
  *		- En este css vamos a poner la estructura básica de 
@@ -31,12 +32,15 @@
  *
  *		3.1 Grid
  *		3.2 Icons
- *		3.3 Mediaqueries
+ *		3.3 Lists --Las clases para modificar las Listas de Base
+ *		3.4 Tipografías --Las clases para modificar las Listas de Base 
+ *		3.5 Mediaqueries  -- Lo pongo al final porque optimamente debe de ser lo último en procesarse
+ *
  */
 
 
 /*
- ***************************** 	## 	1. Base
+ ********************************************************** 	## 	1. Base
  */
 /* Fix respaldar tags html5 en navegadores viejos */
 article, 
@@ -60,7 +64,49 @@ html {
 	padding: 0; 
 }
 /*
- * ### 	1.1 Listas 
+ * ### 	1.1 Forms Base
+ * Referencias: http://www.w3schools.com/tags/tag_form.asp
+ */
+
+button,
+input,
+select,
+textarea {
+ 	border: 0;
+ 	display: block;
+ 	/* Border redondeados */
+ 	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+	/* No aumentar padding a la suma total del ancho */
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+    box-sizing:border-box;
+ }
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	font-size: 0.9em;
+	margin: 1% 0 1% 0;
+	padding: 1em;
+	width: 100%;
+}
+
+/*
+ * ### 	1.2 Listas Base
  * Referencias: http://www.w3schools.com/html/html_lists.asp
  */
 ul {
@@ -69,7 +115,7 @@ ul {
 	padding: 0;
 }
 /*
- * ### 	1.2 Tablas 
+ * ### 	1.3 Tablas  Base
  * Referencias: http://www.w3schools.com/html/html_lists.asp
  */
 table {
@@ -85,27 +131,36 @@ td {
 
 }
 /*
- ***************************** 	## 	2. Layout
- */
-/*
- * ### 	1.3 Tipografías 
+ * ### 	1.4 Tipografías  Base
  * Referencias: http://www.w3schools.com/html/html_lists.asp
  */
 body {
-	color: #010101;
-	font-family: 'Helvetica','Arial', sans-serif;
-	font-size: 14px;
+	background-color: #EEEEEE;
+	color: #666666;
+	font-family: 'Georgia', 'Times', serif;
+	/* El tamaño general de la tipografía se pone en pixeles para establecer referencia con los em */
+	font-size: 16px;
+	line-height: 170%;
 }
 /* Links 
  * Referencias: http://www.w3schools.com/html/html_links.asp
  */
 a { 
-	color: #039039; 
+	color: #0066FF; 
 	text-decoration: underline;
 }
 a:hover { 
-	color: #03C03C; 
+	color: #0099FF; 
 	text-decoration: none;
+}
+
+blockquote {
+	border-left: 0.2em solid;
+	color: #999999;
+	font-family: 'Georgia', 'Times', serif;
+	font-size: 1.2em;
+	font-style: italic;
+	padding-left: 1em;
 }
 
 /* Headings 
@@ -117,43 +172,102 @@ a:hover {
  h4,
  h5,
  h6 {
- 	font-family: 'Georgia', 'Times', serif;
- 	font-style: italic;
- 	font-weight: normal;
+ 	color: #222222;
+ 	font-family: 'Helvetica','Arial', sans-serif;
  }
+ h1 {
+ 	font-size: 2.5em;
+ }
+ h2 {
+ 	font-size: 2em;
+ }
+ h3 {
+ 	font-size: 1.5em;
+ }
+
+/*
+ ********************************************************** 	## 	2. Layout
+ */
 
 /*
  * ### 	2.1 Header 
  */
-.header {
-	background-color: #555555;
+.l_header {
+	background-color: #111111;
 	color: #ffffff;
-}
+	height: 5em;
+	/*  Con este line-height centramos verticalmente los items del menu */
+	line-height: 5em;
+	position: fixed;
+	width: 100%;
+	}
+	.l_header a {
+		color: #ffffff;
+		font-family: 'Helvetica','Arial', sans-serif;
+		font-weight: bold;
+		text-decoration: none;
+		/*  Esto hace que el hover tenga un retraso de 1 segundo */
+		-webkit-transition: all 1s;
+		-moz-transition: all 1s;
+		-o-transition: all 1s;
+		transition:all 1s;
+		}
+		.l_header a:hover { 
+			color: #0099FF; 
+		}
 .header__logo {
+	font-size: 3em;
 
 }
 
 /* Top Menu */
-.header__menu {
-
+.header__menu li {
+	padding: 0 0 0 2%;
 }
 
 /*
  * ### 	2.2 Body
  */
-.body {
+.l_body {
+	padding: 2.5% 0 5% 0;
+	}
+	.l_body .container {
+		/*  Espacio para el header__menu */
+		padding-top: 5em;
+	}
+	.main {
+		background-color: #ffffff;
+	}
 
+.card__name {
+	font-size: 2em;
 }
 
 /*
  * ### 	2.3 Footer
  */
-.footer {
-	background-color: #666666;
-}
+.l_footer {
+	background-color: #232323;
+	color: #cccccc;
+	font-family: 'Helvetica','Arial', sans-serif;
+	padding: 1% 0 4% 0;
+	}
+	.l_footer h3 {
+		color: #cccccc;
+		border-bottom: 0.1em solid #cccccc;
+		padding-bottom: 2.5%;
+	}
+	.footer_legal {
+		font-family: 'Georgia', 'Times', serif;
+		font-size: 0.9em;
+	}
+	.l_footer textarea,
+	.l_footer input {
+		background-color: #111111;
+	}
 
 /*
- ***************************** 	## 	3. Modules
+ ********************************************************** 	## 	3. Modules
  */
 /*
  * ### 	3.1 Grids 
@@ -162,7 +276,7 @@ a:hover {
 	/* usamos este margin para centrar elementos, 
 	(solo funciona si tiene width definido) */
 	margin: 0 auto;
-	width: 80%;
+	width: 90%;
 }
 /*
  *	### Sistema de grids
@@ -183,78 +297,174 @@ a:hover {
 	clear:both;
 }
 .row {
-	zoom:1; /* For IE 6/7 */ 
+	/* Para IE 6/7 */ 
+	zoom:1; 
 }
-.col {
+/* Esto toma todas las class que empiezan por col_ y les da una mismas propiedades */
+.row [class*="col_"] {
 	display: block;
 	float:left;
-	margin: 1% 0 1% 1.6%;
+	margin: 1% 0 1% 2.5%;
 }
-.col:first-child { 
+.row [class*="col_"]:first-child { 
 	margin-left: 0; 
 }
 .col_12 {
 	width: 100%;
 }
 .col_11 {
-  	width: 91.53%;
+  	width: 91.45%;
 }
 .col_10 {
-  	width: 83.06%;
+  	width: 82.91%;
 }
 .col_9 {
-  	width: 74.6%;
+  	width: 74.37%;
 }
 .col_8 {
-  	width: 66.13%;
+  	width: 65.83%;
 }
 .col_7 {
-  	width: 57.66%;
+  	width: 57.29%;
 }
 .col_6 {
-  	width: 49.2%;
+  	width: 48.75%;
 }
 .col_5 {
-  	width: 40.73%;
+  	width: 40.20%;
 }
 .col_4 {
-  	width: 32.26%;
+  	width: 31.66%;
 }
 .col_3 {
-  	width: 23.8%;
+  	width: 23.12%;
 }
 .col_2 {
-  	width: 15.33%;
+  	width: 14.58%;
 }
 .col_1 {
-  	width: 6.866%;
+  	width: 6.041%;
 }
+.rowPut {
+	clear: both;
+	position: relative;
+}
+.put--left {
+	left: 0;
+	position: absolute;
+}
+.put--right {
+	right: 0;
+	position: absolute;
+}
+
 /*
  * ### 	3.2 Icons 
  */
-.icons {
+.icon {
 	/* Esta es la manera accesible de poner un icono de fondo */
 	display: inline-block;
 	text-indent: -999em;
 }
 
 /*
- * ### 	3.3 Mediaqueries 
+ * ### 	3.3 List 
  */
-@media only screen and (max-width: 480px) {
-	.col {  margin: 1% 0 1% 0%; }
-    .col_12, 
-    .col_11, 
-    .col_10, 
-    .col_9, 
-    .col_8, 
-    .col_7, 
-    .col_6, 
-    .col_5, 
-    .col_4, 
-    .col_3, 
-    .col_2, 
-    .col_1 {
-	width: 100%; 
+.list--inline ul {
+    text-align: center;
+	}
+	.list--inline  li { 
+	    display: inline; 
+	}
+.list--noStyle {
+  	margin: 0;
+  	padding: 0;
+	}
+	.list--noStyle li {
+	    list-style: none;
+	    padding: 0 0 em(5) 0;
+	}
+/*
+ * ### 	3.3 Misc 
+ */
+.paddedContainer {
+	padding: 5%;
+}
+.paddedLeft {
+	padding-left: 2.5%;
+}
+.paddedRight {
+	padding-right: 2.5%;
+}
+.bttn {
+	background-color: transparent;
+	cursor: pointer;
+	display: inline-block;
+	width: 40%;
+}
+.bttn--success {
+	border: 0.1em solid #0099FF;
+	color: #0099FF;
+	line-height: 0;
+	font-size: 1em;
+	padding: 1em;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition:all 1s;
+}
+.bttn--success:hover {
+	color: #FFFFFF;
+}
+
+/* Crédito de los íconos: https://www.iconfinder.com/iconsets/bettericons */
+
+.icon__social {
+	height: 3em;
+	width: 3em;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition:all 1s;
+}
+.icon__social:hover {
+	/* Filtro blacno y negro */
+	-webkit-filter: grayscale(1);
+  	filter: grayscale(1);
+}
+.icon__instagram {
+	background: url(../img/instagram.png);
+}
+.icon__facebook {
+	background: url(../img/facebook.png);
+}
+.icon__twitter {
+	background: url(../img/twitter.png);
+}
+
+
+/*
+ * ### 	3.4 Tipografías
+ */
+.textCenter {
+	text-align: center;
+}
+.textLeft {
+	text-align: left;
+}
+.textRight {
+ 	text-align: right;
+}
+
+/*
+ * ### 	3.5 Mediaqueries 
+ */
+@media only screen and (max-width: 760px) {
+    .row [class*="col_"] {
+		width: 100%;
+		margin: 1% 0 1% 0;
+	}
+	.phone--hidden {
+		display: none;
 	}
 }

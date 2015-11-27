@@ -17,61 +17,89 @@
 	<link rel="shortcut icon" href="assets/images/favicon.ico" />
 </head>
 <body>
-	<header>
+	<header class="l_header">
 		<div class="container">
-			<a href="#">Logo</a>
-			<nav>
-				<ul>
-					<li><a href="#">Item 1 </a></li>
-					<li><a href="#">Item 2 </a></li>
-					<li><a href="#">Item 3 </a></li>
-					<li><a href="#">Item 4 </a></li>
-					<li><a href="#">Item 5 </a></li>
-				</ul>
-			</nav>
+			<div class="rowPut">
+				<div class="put--left phone--hidden">
+					<a href="#" class="header__logo">cosme.com</a>
+				</div>
+				<div class="put--right">
+					<nav class="header__menu">
+						<ul class="list--noStyle list--inline">
+							<li><a href="#">Item 1 </a></li>
+							<li><a href="#">Item 2 </a></li>
+							<li><a href="#">Item 3 </a></li>
+							<li><a href="#">Item 4 </a></li>
+							<li><a href="#">Item 5 </a></li>
+						</ul>
+					</nav>
+				</div>	
+			</div>
 		</div>
 	</header>
-	<div class="container">
-		<div class="row">
-			<section class="col col_8">
-			<h1>Lorem Ipsum</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque veritatis incidunt magni placeat sequi quam beatae aliquid voluptates quos ad quaerat consectetur animi, tenetur eum? Officiis tempore accusantium saepe.</p>
-			<h2>Lorem Ipsum </h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque veritatis incidunt magni placeat sequi quam beatae aliquid voluptates quos ad quaerat consectetur animi, tenetur eum? Officiis tempore accusantium saepe.</p>
-			<blockquote>lorem ipsum dolor est</blockquote>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque veritatis incidunt magni placeat sequi quam beatae aliquid voluptates quos ad quaerat consectetur animi, tenetur eum? Officiis tempore accusantium saepe.</p>
+	<div class="l_body">
+		<div class="container">
 			<div class="row">
-				<div class="col col_4"> 
-					<h3>lorem ipsum</h3>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, rerum veritatis hic fugiat recusandae, quod magnam in, architecto reprehenderit debitis cum ad exercitationem odit assumenda unde alias ipsam ea aperiam.
-				</div>
-				<div class="col col_4"> 
-					<h3>lorem ipsum</h3>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, rerum veritatis hic fugiat recusandae, quod magnam in, architecto reprehenderit debitis cum ad exercitationem odit assumenda unde alias ipsam ea aperiam.
-				</div>
-				<div class="col col_4"> 
-					<h3>lorem ipsum</h3>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, rerum veritatis hic fugiat recusandae, quod magnam in, architecto reprehenderit debitis cum ad exercitationem odit assumenda unde alias ipsam ea aperiam.
-				</div>
+				<aside class="col_4 card">
+					<p class="card__name">Cosme Fulanito</p>
+					<p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi totam eum, ab, asperiores.</small></p>
+					<adress>
+						Av. Siempre Viva <br>	
+						Springfield <br>
+						Masachussets <br>
+						Cp. 03340 <br>
+					</adress>
+				</aside>
+				<section class="col_8 main">
+					<div class="paddedContainer">
+						<h1>Lorem Ipsum</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque veritatis incidunt magni placeat sequi quam beatae aliquid voluptates quos ad quaerat consectetur animi, tenetur eum? Officiis tempore accusantium saepe.</p>
+						<h2>Lorem Ipsum </h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque veritatis incidunt magni placeat sequi quam beatae aliquid voluptates quos ad quaerat consectetur animi, tenetur eum? Officiis tempore accusantium saepe.</p>
+						<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque esse, deleniti ut numquam debitis blanditiis sequi a necessitatibus incidunt illum.</blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque veritatis incidunt magni placeat sequi quam beatae aliquid voluptates quos ad quaerat consectetur animi, tenetur eum? Officiis tempore accusantium saepe.</p>
+						<div class="row">
+							<div class="col_4"> 
+								<h3>lorem ipsum</h3>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, rerum veritatis hic fugiat recusandae, quod magnam in, architecto reprehenderit debitis cum ad exercitationem odit assumenda unde alias ipsam ea aperiam.
+							</div>
+							<div class="col_4"> 
+								<h3>lorem ipsum</h3>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, rerum veritatis hic fugiat recusandae, quod magnam in, architecto reprehenderit debitis cum ad exercitationem odit assumenda unde alias ipsam ea aperiam.
+							</div>
+							<div class="col_4"> 
+								<h3>lorem ipsum</h3>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, rerum veritatis hic fugiat recusandae, quod magnam in, architecto reprehenderit debitis cum ad exercitationem odit assumenda unde alias ipsam ea aperiam.
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
-		</section>
-		<aside class="col col_4">
-			<div class="card">
-				<p class="card__name">Cosme Fulanito</p>
-				<p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi totam eum, ab, asperiores.</small></p>
-				<adress>
-					Av. Siempre Viva <br>	
-					Springfield <br>
-					Masachussets <br>
-					Cp. 03340 <br>
-				</adress>
-			</div>
-		</aside>
 		</div>
 	</div>
-	<footer>
+	<footer class="l_footer">
 		<div class="container">
-		<p>lorem ipsum 2015</p>
+			<div class="row">
+				<div class="col_6">
+					<h3>Lorem ipsum</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, rerum veritatis hic fugiat recusandae, quod magnam in, architecto reprehenderit debitis cum ad exercitationem odit assumenda unde alias ipsam ea aperiam.</p>
+					<ul class="list--noStyle list--inline">
+						<li><a href="#" class="icon icon__social icon__facebook">Facebook</a></li>
+						<li><a href="#" class="icon icon__social  icon__twitter">Twitter</a></li>
+						<li><a href="#" class="icon icon__social icon__instagram">Instagram</a></li>
+					</ul>
+					<p class="footer_legal">Creative commons 2015</p>
+				</div>
+				<div class="col_6">
+					<h3>Contáctanos</h3>
+					<form action="" class="form">
+						<input type="text" placeholder="Nombre">
+						<input type="email" placeholder="Email">
+						<textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+						<button type="button" class="bttn bttn--success">Enviar</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	</footer>
 </body>
