@@ -8,14 +8,14 @@ _La mayoría de los recursos y contenidos están en el apartado de wiki_
 
 ### índice:
 
-* html-css
+* html-css http://weydesigner.com/tutoriales/html-css/index.html
 	* html (estructura y sintaxis básica)
 	* css  (estructura y estilos básicos)
 
 * html-js
-	* dropdown
-	* google maps
-	* smooth scroll
-	* sticky menu 
+	* dropdown http://weydesigner.com/tutoriales/html-js/dropdwon.html
+	* google maps http://weydesigner.com/tutoriales/html-js/google-maps.html
+	* smooth scroll http://weydesigner.com/tutoriales/html-js/smooth.html
+	* sticky menu http://weydesigner.com/tutoriales/html-js/stciky-menu.html
 	
 
