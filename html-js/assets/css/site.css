@@ -13,10 +13,10 @@
  *		- En este css vamos a poner todas las tags básicas. 
  *		No ponemos ni class ni id
  *
- *		1.1 Form Base
- *		1.2 Listas Base
- *		1.3 Tablas Base
- *		1.4 Tipografías Base
+ *		1.1 Forms Base
+ *		1.2 Lists Base
+ *		1.3 Tables Base
+ *		1.4 Typography Base
  *
  *	##	2. Layout
  *		- En este css vamos a poner la estructura básica de 
@@ -30,11 +30,19 @@
  *		- En este css vamos a usar de manera modular a lo largo 
  *		de nuestros proyecto
  *
- *		3.1 Grid
- *		3.2 Icons
- *		3.3 Lists --Las clases para modificar las Listas de Base
- *		3.4 Tipografías --Las clases para modificar las Listas de Base 
- *		3.5 Mediaqueries  -- Lo pongo al final porque optimamente debe de ser lo último en procesarse
+ *		3.1 Buttons
+ *		3.2 Grid
+ *		3.3 Icons
+ *		3.4 Lists --Las clases para modificar las Listas de Base
+ *		3.5 Mediaqueries
+ *		3.6 Miscellaneous
+ *		3.7 Typography --Las clases para modificar las Listas de Base 
+ *		3.8 States
+ *		
+ * 	## 	4. Pages
+ *		- Css particulares de cada página
+ *
+ *		4.1 Maps
  *
  */
 
@@ -115,7 +123,7 @@ ul {
 	padding: 0;
 }
 /*
- * ### 	1.3 Tablas  Base
+ * ### 	1.3 Tables  Base
  * Referencias: http://www.w3schools.com/html/html_lists.asp
  */
 table {
@@ -131,7 +139,7 @@ td {
 
 }
 /*
- * ### 	1.4 Tipografías  Base
+ * ### 	1.4 Typography  Base
  * Referencias: http://www.w3schools.com/html/html_lists.asp
  */
 body {
@@ -196,6 +204,7 @@ blockquote {
 	line-height: 5em;
 	position: fixed;
 	width: 100%;
+	z-index: 9999;
 	}
 	.l_header a {
 		text-decoration: none;
@@ -209,7 +218,7 @@ blockquote {
 }
 
 /* Top Menu */
-.header__menu li {
+.header__menu a {
 	padding: 0 0 0 2%;
 }
 
@@ -217,7 +226,7 @@ blockquote {
  * ### 	2.2 Body
  */
 .l_body {
-	padding: 2.5% 0 5% 0;
+	padding: 2% 0 2.5% 0;
 	}
 	.l_body .container {
 		/*  Espacio para el header__menu */
@@ -259,8 +268,39 @@ blockquote {
 /*
  ********************************************************** 	## 	3. Modules
  */
+
 /*
- * ### 	3.1 Grids 
+ * ### 	3.1 Buttons 
+ */
+.bttn {
+	background-color: transparent;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	width: 40%;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+.bttn--success {
+	background-color: #222222;
+	border: 0.2em solid #222222;
+	color: #ffffff;
+	line-height: 0;
+	font-size: 1em;
+	padding: 1em;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition:all 1s;
+	}
+	.bttn--success:hover {
+		background-color: transparent;
+		color: #222222;
+		}
+
+/*
+ * ### 	3.2 Grids 
  */
 .container {
 	/* usamos este margin para centrar elementos, 
@@ -295,7 +335,7 @@ blockquote {
 .row [class*="col_"] {
 	display: block;
 	float:left;
-	margin: 1% 0 1% 2.5%;
+	margin: 0 0 0 2.5%;
 }
 .row [class*="col_"]:first-child { 
 	margin-left: 0; 
@@ -350,68 +390,14 @@ blockquote {
 }
 
 /*
- * ### 	3.2 Icons 
+ * ### 	3.3 Icons 
  */
 .icon {
 	/* Esta es la manera accesible de poner un icono de fondo */
 	display: inline-block;
 	text-indent: -999em;
 }
-
-/*
- * ### 	3.3 List 
- */
-.list--inline ul {
-    text-align: center;
-	}
-	.list--inline  li { 
-	    display: inline; 
-	}
-.list--noStyle {
-  	margin: 0;
-  	padding: 0;
-	}
-	.list--noStyle li {
-	    list-style: none;
-	    padding: 0 0 em(5) 0;
-	}
-/*
- * ### 	3.3 Misc 
- */
-.paddedContainer {
-	padding: 5%;
-}
-.paddedLeft {
-	padding-left: 2.5%;
-}
-.paddedRight {
-	padding-right: 2.5%;
-}
-.bttn {
-	background-color: transparent;
-	cursor: pointer;
-	display: inline-block;
-	width: 40%;
-}
-.bttn--success {
-	background-color: #222222;
-	border: 0.2em solid #222222;
-	color: #ffffff;
-	line-height: 0;
-	font-size: 1em;
-	padding: 1em;
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-	-o-transition: all 1s;
-	transition:all 1s;
-	}
-	.bttn--success:hover {
-		background-color: transparent;
-		color: #222222;
-		}
-
 /* Crédito de los íconos: https://www.iconfinder.com/iconsets/bettericons */
-
 .icon__social {
 	height: 3em;
 	width: 3em;
@@ -435,9 +421,44 @@ blockquote {
 	background: url(../img/twitter.png);
 }
 
+/*
+ * ### 	3.4 List 
+ */
+.list--inline ul {
+    text-align: center;
+	}
+	.list--inline  li { 
+	    display: inline; 
+	}
+.list--noStyle {
+  	margin: 0;
+  	padding: 0;
+	}
+	.list--noStyle li {
+	    list-style: none;
+	    padding: 0 0 em(5) 0;
+	}
 
 /*
- * ### 	3.4 Tipografías
+ * ### 	3.5 Mediaqueries 
+ * Lo pongo al final porque optimamente debe de ser lo último en procesarse
+ */
+
+/*
+ * ### 	3.6 Misc 
+ */
+.paddedContainer {
+	padding: 5%;
+}
+.paddedLeft {
+	padding-left: 2.5%;
+}
+.paddedRight {
+	padding-right: 2.5%;
+}
+
+/*
+ * ### 	3.7 Typography
  */
 .textCenter {
 	text-align: center;
@@ -448,6 +469,27 @@ blockquote {
 .textRight {
  	text-align: right;
 }
+
+/*
+ * ### 	3.7 States
+ */
+ .active {
+ 	color: #ccc;
+ }
+
+/*
+ ********************************************************** 	## 	4. Pages
+ */
+/*
+ * ### 	4.1 Maps 
+ */
+.map__google {
+	height: 30em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+
 
 /*
  * ### 	3.5 Mediaqueries 
