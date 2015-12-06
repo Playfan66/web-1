@@ -149,6 +149,10 @@ body {
 	font-size: 16px;
 	line-height: 170%;
 }
+p {
+	margin: 0;
+	padding: 0 0 2em 0;
+}
 /* Links 
  * Referencias: http://www.w3schools.com/html/html_links.asp
  */
@@ -455,6 +459,15 @@ blockquote {
 }
 .paddedRight {
 	padding-right: 2.5%;
+}
+.blue {
+	background-color: #00CCFF;
+}
+.pink {
+	background-color: #FF99FF;
+}
+.yellow {
+	background-color: #CCFF66;
 }
 
 /*
