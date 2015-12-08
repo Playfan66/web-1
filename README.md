@@ -13,7 +13,7 @@ _La mayoría de los recursos y contenidos están en el apartado de wiki_
 	* css  (estructura y estilos básicos)
 
 * html-js
-	* dropdown http://weydesigner.com/tutoriales/html-js/dropdwon.html
+	* dropdown http://weydesigner.com/tutoriales/html-js/dropdown.html
 	* google maps http://weydesigner.com/tutoriales/html-js/google-maps.html
 	* smooth scroll http://weydesigner.com/tutoriales/html-js/smooth.html
 	* sticky menu http://weydesigner.com/tutoriales/html-js/stciky-menu.html
