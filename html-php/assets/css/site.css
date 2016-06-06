@@ -1,0 +1,514 @@
+@charset "UTF-8";
+/* 
+ *	 # 	Organización básica css
+ *	 	Creado por @juandiegoles 2015 con fines pedagógicos*
+ *		Recomiendo encarecidamente el uso de sass http://sass-lang.com/
+ *		- Se ordenará por orden alfabético.
+ *			· Usamos el orden alfabético para que el código 
+ *			sea más fácil de leer por otros desarrolladores.
+ *		- El tab size será 4.
+ *		- Recuerda comentar todo para no olvidarlo. Y otros puedan 
+ *		entender tu código
+ *
+ * 	## 	1. Base
+ *		- En este css vamos a poner todas las tags básicas. 
+ *		No ponemos ni class ni id
+ *
+ *		1.1 Forms Base
+ *		1.2 Lists Base
+ *		1.3 Tables Base
+ *		1.4 Typography Base
+ *
+ *	##	2. Layout
+ *		- En este css vamos a poner la estructura básica de 
+ *      nuestra página. Esctructuramos de arriba a abajo
+ *
+ *		2.1 Header
+ *		2.2 Body
+ *		2.3 Footer
+ *
+ * 	## 	3. Modules
+ *		- En este css vamos a usar de manera modular a lo largo 
+ *		de nuestros proyecto
+ *
+ *		3.1 Buttons
+ *		3.2 Grid
+ *		3.3 Icons
+ *		3.4 Imágenes
+ *		3.5 Lists --Las clases para modificar las Listas de Base
+ *		3.6 Mediaqueries
+ *		3.7 Miscellaneous
+ *		3.8 Typography --Las clases para modificar las Listas de Base 
+ *		3.9 States
+ *
+ */
+
+
+/*
+ ********************************************************** 	## 	1. Base
+ */
+/* Fix respaldar tags html5 en navegadores viejos */
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+menu, 
+nav, 
+section {
+	display: block;
+}
+/* Quitamos los margenes por defecto del documento */
+body, 
+html { 
+	/* Cuando las cifras son 0 no ponemos el formato (px,em,rm) */
+	margin: 0; 
+	padding: 0; 
+}
+/*
+ * ### 	1.1 Forms Base
+ * Referencias: http://www.w3schools.com/tags/tag_form.asp
+ */
+
+button,
+input,
+select,
+textarea {
+ 	border: 1px solid #222222;
+ 	display: block;
+ 	/* Border redondeados */
+ 	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+	/* No aumentar padding a la suma total del ancho */
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+    box-sizing:border-box;
+ }
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	font-size: 0.9em;
+	margin: 1% 0 1% 0;
+	padding: 1em;
+	width: 100%;
+}
+
+/*
+ * ### 	1.2 Listas Base
+ * Referencias: http://www.w3schools.com/html/html_lists.asp
+ */
+ul {
+	/* Las medidas se escriben en orden de las manecillas del reloj */
+	margin: 0 0 2em 0;
+	padding: 0;
+}
+/*
+ * ### 	1.3 Tables  Base
+ * Referencias: http://www.w3schools.com/html/html_lists.asp
+ */
+table {
+	border-left: 0.1em solid #222222; 
+	font-size: 0.8em;
+	text-align: left;
+}
+thead {
+	
+}
+td {
+	border-bottom: 0.1em solid #222222; 
+	border-right: 0.1em solid #222222; 
+	padding: 0.2em;
+}
+th {
+	border-bottom: 0.1em solid #222222; 
+	border-right: 0.1em solid #222222; 
+	border-top: 0.1em solid #222222; 
+	padding: 0.2em;
+}
+/*
+ * ### 	1.4 Typography  Base
+ * Referencias: http://www.w3schools.com/html/html_lists.asp
+ */
+body {
+	color: #222222;
+	font-family: 'Helvetica','Arial', sans-serif;
+	/* El tamaño general de la tipografía se pone en pixeles para establecer referencia con los em */
+	font-size: 16px;
+	line-height: 170%;
+}
+/* Links 
+ * Referencias: http://www.w3schools.com/html/html_links.asp
+ */
+a { 
+	color: #222222; 
+	text-decoration: underline;
+}
+a:hover { 
+	text-decoration: none;
+}
+
+blockquote {
+	border-left: 0.2em solid;
+	font-size: 1.2em;
+	font-style: italic;
+	padding-left: 1em;
+}
+
+/* Headings 
+ * Referencias: http://www.w3schools.com/html/html_headings.asp
+ */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+ 	color: #222222;
+ }
+ h1 {
+ 	font-size: 2.5em;
+ }
+ h2 {
+ 	font-size: 2em;
+ }
+ h3 {
+ 	font-size: 1.5em;
+ }
+
+/*
+ ********************************************************** 	## 	2. Layout
+ */
+
+/*
+ * ### 	2.1 Header 
+ */
+.l_header {
+	background-color: #ffffff;
+	border-bottom: 0.2em solid #222222;
+	font-weight: bold;
+	height: 5em;
+	/*  Con este line-height centramos verticalmente los items del menu */
+	line-height: 5em;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	}
+	.l_header a {
+		text-decoration: none;
+		}
+		.l_header a:hover {
+			text-decoration: underline;
+		}
+.header__logo {
+	font-size: 2em;
+
+}
+
+/* Top Menu */
+.header__menu a {
+	padding: 0 0 0 2%;
+}
+
+/*
+ * ### 	2.2 Body
+ */
+.l_body {
+	padding: 2% 0 2.5% 0;
+	}
+	.l_body .container {
+		/*  Espacio para el header__menu */
+		padding-top: 5em;
+	}
+	.main {
+		border: 0.2em solid #222222;
+		-webkit-border-radius: 0.5em;
+		-moz-border-radius: 0.5em;
+		border-radius: 0.5em;
+		/* No aumentar padding a la suma total del ancho */
+		-webkit-box-sizing:border-box; 
+		-moz-box-sizing:border-box; 
+	    box-sizing:border-box;
+	}
+
+.card__name {
+	font-size: 2em;
+}
+
+/*
+ * ### 	2.3 Footer
+ */
+.l_footer {
+	padding: 1% 0 4% 0;
+	}
+	.l_footer h3 {
+		border-bottom: 0.1em solid #222222;
+		padding-bottom: 2.5%;
+	}
+	.footer_legal {
+		font-size: 0.9em;
+	}
+	.l_footer textarea,
+	.l_footer input {
+		border: 0.2em solid #222222;
+	}
+
+/*
+ ********************************************************** 	## 	3. Modules
+ */
+
+/*
+ * ### 	3.1 Buttons 
+ */
+.bttn {
+	background-color: transparent;
+	cursor: pointer;
+	display: inline-block;
+	width: 40%;
+}
+.bttn--success {
+	background-color: #222222;
+	border: 0.2em solid #222222;
+	color: #ffffff;
+	line-height: 0;
+	font-size: 1em;
+	padding: 1em;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition:all 1s;
+	}
+	.bttn--success:hover {
+		background-color: transparent;
+		color: #222222;
+		}
+
+/*
+ * ### 	3.2 Grids 
+ */
+.container {
+	/* usamos este margin para centrar elementos, 
+	(solo funciona si tiene width definido) */
+	margin: 0 auto;
+	width: 90%;
+
+}
+/*
+ *	### Sistema de grids
+ *		Basado en http://www.responsivegridsystem.com/calculator/
+ */
+
+.row {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+.row:before,
+.row:after {
+	display:table; 
+	content:"";  
+}
+.row:after { 
+	clear:both;
+}
+.row {
+	/* Para IE 6/7 */ 
+	zoom:1; 
+}
+/* Esto toma todas las class que empiezan por col_ y les da una mismas propiedades */
+.row [class*="col_"] {
+	display: block;
+	float:left;
+	margin: 0 0 0 2.5%;
+}
+.row [class*="col_"]:first-child { 
+	margin-left: 0; 
+}
+.col_12 {
+	width: 100%;
+}
+.col_11 {
+  	width: 91.45%;
+}
+.col_10 {
+  	width: 82.91%;
+}
+.col_9 {
+  	width: 74.37%;
+}
+.col_8 {
+  	width: 65.83%;
+}
+.col_7 {
+  	width: 57.29%;
+}
+.col_6 {
+  	width: 48.75%;
+}
+.col_5 {
+  	width: 40.20%;
+}
+.col_4 {
+  	width: 31.66%;
+}
+.col_3 {
+  	width: 23.12%;
+}
+.col_2 {
+  	width: 14.58%;
+}
+.col_1 {
+  	width: 6.041%;
+}
+.rowPut {
+	clear: both;
+	position: relative;
+}
+.put--left {
+	left: 0;
+	position: absolute;
+}
+.put--right {
+	right: 0;
+	position: absolute;
+}
+
+/*
+ * ### 	3.3 Icons 
+ */
+.icon {
+	/* Esta es la manera accesible de poner un icono de fondo */
+	display: inline-block;
+	text-indent: -999em;
+}
+/* Crédito de los íconos: https://www.iconfinder.com/iconsets/bettericons */
+.icon__social {
+	height: 3em;
+	width: 3em;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition:all 1s;
+}
+.icon__social:hover {
+	/* Filtro blacno y negro */
+	-webkit-filter: grayscale(1);
+  	filter: grayscale(1);
+}
+.icon__instagram {
+	background: url(../img/instagram.png);
+}
+.icon__facebook {
+	background: url(../img/facebook.png);
+}
+.icon__twitter {
+	background: url(../img/twitter.png);
+}
+
+/*
+ * ### 	3.4 Imágenes 
+ */
+
+.img--circle {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	height: 10em;
+	width: 10em;
+}
+
+/*
+ * ### 	3.5 List 
+ */
+.list--inline ul {
+    text-align: center;
+	}
+	.list--inline  li { 
+	    display: inline; 
+	}
+.list--noStyle {
+  	margin: 0;
+  	padding: 0;
+	}
+	.list--noStyle li {
+	    list-style: none;
+	    padding: 0 0 em(5) 0;
+	}
+
+/*
+ * ### 	3.6 Mediaqueries 
+ * Lo pongo al final porque optimamente debe de ser lo último en procesarse
+ */
+
+/*
+ * ### 	3.7 Misc 
+ */
+.paddedContainer {
+	padding: 5%;
+}
+.paddedLeft {
+	padding-left: 2.5%;
+}
+.paddedRight {
+	padding-right: 2.5%;
+}
+
+/*
+ * ### 	3.8 Typography
+ */
+.textCenter {
+	text-align: center;
+}
+.textLeft {
+	text-align: left;
+}
+.textRight {
+ 	text-align: right;
+}
+
+/*
+ * ### 	3.9 States
+ */
+ .active {
+ 	color: #ccc;
+ }
+ .alert {
+ 	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+ 	background-color: #993333;
+ 	color: #ffffff;
+ 	padding: 2.5%;
+ }
+
+ /*
+ * ### 	3.6 Mediaqueries 
+ */
+@media only screen and (max-width: 760px) {
+	/*
+		Agregar esta class a todas las columnas que quieran "romper" en 760px
+	*/
+    .col--break {
+		width: 100%;
+		margin: 1% 0 1% 0;
+	}
+	.phone--hidden {
+		display: none;
+	}
+}
