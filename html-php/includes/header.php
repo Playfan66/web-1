@@ -25,7 +25,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col_2">
-					<a href="index.php" class="header__logo">php</a>
+					<a href="https://github.com/juandiegoles/web" class="header__logo">php</a>
 				</div>
 				<div class="col_10">
 					<nav class="textRight header__menu" id="nav">
